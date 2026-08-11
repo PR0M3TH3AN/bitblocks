@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BitBlocks — composable infrastructure for an internet you own</title>
+<meta name="description" content="A stack of composable Nostr and Bitcoin building blocks: identity, policy, feeds, payments, and agent capabilities — for apps that can't lock anyone in.">
+<link rel="stylesheet" href="./assets/bitblocks.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='2' width='9' height='9' fill='%236c4df6'/%3E%3Crect x='13' y='2' width='9' height='9' fill='%23e0a12b'/%3E%3Crect x='2' y='13' width='9' height='9' fill='%2323b3c6'/%3E%3Crect x='13' y='13' width='9' height='9' fill='%23f7931a'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="topbar">
+  <div class="frame">
+    <a class="wordmark" href="./index.html" aria-label="BitBlocks home">
+      <span class="logo-blocks" aria-hidden="true">
+        <i style="background:var(--c-login)"></i><i style="background:var(--c-gate)"></i>
+        <i style="background:var(--c-feed)"></i><i style="background:var(--c-unlock)"></i>
+      </span>
+      bitblocks
+    </a>
+    <nav>
+      <a href="#blocks">the blocks</a>
+      <a href="#compose">how they compose</a>
+      <a href="#build">build</a>
+      <a class="cta" href="https://tessera.bitblocks.network">Tessera →</a>
+      <button id="theme" type="button" aria-label="Toggle theme">◑</button>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="frame">
+    <div class="lead">
+      <p class="coord">composable nostr · bitcoin infrastructure</p>
+      <h1 class="display">The web made you a tenant. <span class="own">Own</span> the stack.</h1>
+      <p class="lede">BitBlocks is a set of composable building blocks for apps that can't lock anyone
+        in — no server of record, no account to close, no algorithm you can't swap. Each block does
+        one thing, signs everything, and runs on open relays.</p>
+      <div class="actions">
+        <a class="btn" href="#blocks">See the blocks</a>
+        <a class="btn ghost" href="#compose">How they fit together</a>
+      </div>
+    </div>
+    <div class="assembly" aria-label="The five building blocks">
+      <div class="stack">
+        <a class="block-bar" style="--bc:var(--c-login)" href="https://login.bitblocks.network"><span class="swatch"></span><span class="bn">BitLogin</span><span class="bq">who are you</span></a>
+        <a class="block-bar" style="--bc:var(--c-gate)" href="https://gate.bitblocks.network"><span class="swatch"></span><span class="bn">BitGate</span><span class="bq">what may you do</span></a>
+        <a class="block-bar" style="--bc:var(--c-feed)" href="https://feed.bitblocks.network"><span class="swatch"></span><span class="bn">BitFeed</span><span class="bq">what do you see</span></a>
+        <a class="block-bar" style="--bc:var(--c-unlock)" href="https://bitunlock.network"><span class="swatch"></span><span class="bn">BitUnlock</span><span class="bq">how you're paid</span></a>
+        <a class="block-bar" style="--bc:var(--c-tessera)" href="https://tessera.bitblocks.network"><span class="swatch"></span><span class="bn">Tessera</span><span class="bq">what you can do</span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="thesis">
+  <div class="frame">
+    <p class="coord">§ 01 — the premise</p>
+    <p class="lead">Every platform you use owns the four things that matter: your name, your feed, your
+      money, and your right to be there.</p>
+    <div class="cols">
+      <div>
+        <span class="k">the tenant's web</span>
+        <p>Your identity is a row in someone's database. Your feed is an algorithm you can't read.
+          Your payments run through a processor that can freeze them. Your account can be closed,
+          and everything you built inside it goes with it. You are renting.</p>
+      </div>
+      <div>
+        <span class="k">the owner's web</span>
+        <p>BitBlocks moves each of those to open ground: a key you hold, a feed recipe you write,
+          money that settles cryptographically, and a presence no host can revoke. The apps become
+          clients over public data — replaceable, forkable, unable to hold you hostage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blocks" id="blocks">
+  <div class="frame">
+    <div class="section-head">
+      <p class="coord" style="width:100%">§ 02 — the blocks</p>
+      <h2 class="display">Five primitives.<br>One per question.</h2>
+      <p>Each block is small, opinionated, and independent. Use one, or snap them together — they were
+        designed to compose, not to depend.</p>
+    </div>
+    <div class="block-list">
+      <a class="block-row" style="--bc:var(--c-login)" href="https://login.bitblocks.network">
+        <div class="id"><span class="sq"></span><div><div class="nm">BitLogin</div><div class="q">who are you</div></div></div>
+        <p class="desc">A <b>portable Nostr identity</b> — a familiar username and password unlock a key
+          that's yours, backed by public relays with an independent recovery phrase. No account server,
+          no password-reset email, no database. Any app already written for a NIP-07 signer works
+          unchanged.</p>
+        <span class="go">login.bitblocks.network →</span>
+      </a>
+      <a class="block-row" style="--bc:var(--c-gate)" href="https://gate.bitblocks.network">
+        <div class="id"><span class="sq"></span><div><div class="nm">BitGate</div><div class="q">what may you do</div></div></div>
+        <p class="desc">A <b>policy engine</b> with four independent dimensions — rank, show, interact,
+          transact. You supply the policy; it supplies precedence, composition, and a readable
+          explanation of every decision. Moderation and access control without writing the machinery.</p>
+        <span class="go">gate.bitblocks.network →</span>
+      </a>
+      <a class="block-row" style="--bc:var(--c-feed)" href="https://feed.bitblocks.network">
+        <div class="id"><span class="sq"></span><div><div class="nm">BitFeed</div><div class="q">what do you see</div></div></div>
+        <p class="desc">A <b>headless feed engine</b>. You write the algorithm as providers and a recipe;
+          it sources, scores, mixes, orders, and explains — and contains no recommendation logic of its
+          own. Swap the recipe, swap the feed. The algorithm is yours, and it's legible.</p>
+        <span class="go">feed.bitblocks.network →</span>
+      </a>
+      <a class="block-row" style="--bc:var(--c-unlock)" href="https://bitunlock.network">
+        <div class="id"><span class="sq"></span><div><div class="nm">BitUnlock</div><div class="q">how you're paid</div></div></div>
+        <p class="desc"><b>Payment-verified delivery.</b> Every required Lightning leg settles before an
+          encrypted payload is released — re-encrypted to the buyer's own key. Sell digital goods,
+          access, and capabilities in bitcoin, with cryptographic proof instead of a payment processor.</p>
+        <span class="go">bitunlock.network →</span>
+      </a>
+      <a class="block-row" style="--bc:var(--c-tessera)" href="https://tessera.bitblocks.network">
+        <div class="id"><span class="sq"></span><div><div class="nm">Tessera</div><div class="q">what you can do</div></div></div>
+        <p class="desc">The <b>capability network for agents</b> — Agent Plugins published, curated, and
+          installed over Nostr, by people and by the agents themselves. Every listing is a signed event;
+          installs verify on your machine. Tessera is also the proof the stack composes: it's built from
+          the other four.</p>
+        <span class="go">tessera.bitblocks.network →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="compose" id="compose">
+  <div class="frame">
+    <div class="section-head">
+      <p class="coord" style="width:100%">§ 03 — how they compose</p>
+      <h2 class="display">A stack, not a suite.</h2>
+      <p>Read left to right, they answer the full lifecycle of a sovereign app. Any block can stand
+        alone; together they interlock.</p>
+    </div>
+    <div class="flow">
+      <div class="node" style="--bc:var(--c-login)"><div class="q">who are you</div><div class="sq"></div><div class="nm">BitLogin</div><div class="role">a key you hold</div></div>
+      <div class="node" style="--bc:var(--c-gate)"><div class="q">what may you do</div><div class="sq"></div><div class="nm">BitGate</div><div class="role">policy you set</div></div>
+      <div class="node" style="--bc:var(--c-feed)"><div class="q">what do you see</div><div class="sq"></div><div class="nm">BitFeed</div><div class="role">an algorithm you write</div></div>
+      <div class="node" style="--bc:var(--c-unlock)"><div class="q">how you're paid</div><div class="sq"></div><div class="nm">BitUnlock</div><div class="role">money you custody</div></div>
+      <div class="node" style="--bc:var(--c-tessera)"><div class="q">what you can do</div><div class="sq"></div><div class="nm">Tessera</div><div class="role">capabilities you own</div></div>
+    </div>
+    <p class="note"><b>Tessera is the worked example.</b> It signs users in with BitLogin, moderates
+      with BitGate's four dimensions, ranks its feed with BitFeed-shaped recipes, and gates paid
+      plugins through BitUnlock — a real application assembled entirely from the blocks. Nothing about
+      it is special-cased; it's just a client over public events, which is the whole point.</p>
+  </div>
+</section>
+
+<section class="principles">
+  <div class="frame">
+    <div class="section-head">
+      <p class="coord" style="width:100%">§ 04 — what holds it together</p>
+      <h2 class="display">The shared foundation.</h2>
+    </div>
+    <div class="prin-grid">
+      <div class="prin"><div class="n">01</div><h3>Signed by substrate</h3><p>Every action is a signed event. Provenance isn't a feature bolted on — it's the storage layer, verified on your device, not taken on a server's word.</p></div>
+      <div class="prin"><div class="n">02</div><h3>No server of record</h3><p>State lives on open relays. Any client can read it; no one can close your account or delete your history out from under you.</p></div>
+      <div class="prin"><div class="n">03</div><h3>Own the algorithm</h3><p>The feed, the policy, the trust graph, the price — all of it is data you write and swap. No opaque ranking, no locked-in rules.</p></div>
+      <div class="prin"><div class="n">04</div><h3>Static-first</h3><p>Each block embeds in a plain static site. The code that decides anything about you runs on your side, where you can read it.</p></div>
+      <div class="prin"><div class="n">05</div><h3>Bitcoin-native money</h3><p>Value moves over Lightning and settles cryptographically. Payment is proof, not a promise from a processor that can reverse it.</p></div>
+      <div class="prin"><div class="n">06</div><h3>No platform to capture</h3><p>Vendor-neutral format, vendor-neutral distribution. Fork any client; the network is the events, not the front door.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="builders" id="build">
+  <div class="frame">
+    <div>
+      <p class="coord" style="margin-bottom:18px">§ 05 — for builders</p>
+      <h2 class="display">Assemble your own.</h2>
+      <p>Every block is open and composable, with a dependency-free core and a static build. Start with
+        the capability network — install its skill and let an agent search, publish, and install over
+        Nostr — or embed a single block in a site you already have.</p>
+      <div class="actions">
+        <a class="btn" href="https://tessera.bitblocks.network">Explore Tessera</a>
+        <a class="btn ghost" href="https://github.com/PR0M3TH3AN">Source on GitHub</a>
+      </div>
+    </div>
+    <div class="term" aria-hidden="true">
+      <div><span class="c"># install the capability network's own skill</span></div>
+      <div><span class="g">$</span> tessera install tessera</div>
+      <div style="height:10px"></div>
+      <div><span class="c"># it verifies signature + hash on your machine</span></div>
+      <div><span class="c"># — signed by substrate, not our word</span></div>
+      <div style="height:10px"></div>
+      <div><span class="g">$</span> tessera search "pdf ocr"</div>
+      <div><span class="g">$</span> tessera inspect &lt;naddr&gt;<span class="c"> # trust report</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="frame">
+    <div class="fcol">
+      <h4>the blocks</h4>
+      <a href="https://login.bitblocks.network">BitLogin — identity</a>
+      <a href="https://gate.bitblocks.network">BitGate — policy</a>
+      <a href="https://feed.bitblocks.network">BitFeed — feeds</a>
+      <a href="https://bitunlock.network">BitUnlock — payments</a>
+      <a href="https://tessera.bitblocks.network">Tessera — capabilities</a>
+    </div>
+    <div class="fcol">
+      <h4>build</h4>
+      <a href="https://github.com/PR0M3TH3AN">GitHub</a>
+      <a href="https://agent-plugins.org">Agent Plugins spec</a>
+      <a href="#compose">How they compose</a>
+    </div>
+    <div class="fcol" style="align-self:flex-end;text-align:right">
+      <span class="sign">bitblocks · an owner's internet</span>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/bitblocks.js" defer></script>
+</body>
+</html>
