@@ -10,18 +10,20 @@ strong; the actionable notes are precision and positioning, which matter a lot
 for security infrastructure. Distilled, with our take:
 
 ### Positioning
-- **[agree] Stop calling all five things "primitives."** Tessera is an
-  application built WITH the stack, not a fifth primitive. Reframe as
-  **"Four primitives. One proof they compose."** — a PRIMITIVES tier
-  (BitLogin · BitGate · BitFeed · BitUnlock) and a BUILT-WITH tier (Tessera,
-  then future apps). A stronger story than forced five-way symmetry.
-- **[agree] Add one architecture diagram:** Nostr / Lightning → the four blocks
-  → Tessera / future apps. Communicates the whole project in ~ten seconds.
-- **[agree] Sharpen the thesis:** "BitBlocks is an application architecture in
-  which identity, policy, discovery, payments, and capabilities are portable
-  objects rather than proprietary backend services — the client becomes the
-  disposable part." Keep the hero line ("The web made you a tenant. Own the
-  stack.").
+- **[DONE 2026-08-12] Stop calling all five things "primitives."** §02 is now
+  "Four primitives. One proof." with a "built with the four ↓" band separating
+  BitLogin/BitGate/BitFeed/BitUnlock from Tessera; §03 splits the tiers
+  explicitly (see the diagram below).
+- **[DONE 2026-08-12] Architecture diagram.** §03 now shows a layered diagram —
+  OPEN SUBSTRATE (Nostr · Lightning) → FOUR PRIMITIVES → BUILT WITH THE STACK
+  (Tessera + your app + what's next), read bottom to top. The ghost app slots
+  make the "one family of apps, not one app" point. Communicates the stack in
+  ten seconds, as intended.
+- **[PARTIAL 2026-08-12] Sharpen the thesis.** Added "the client is the
+  disposable part" to §03; the §01 tenant-vs-owner framing already carries the
+  thesis. Still could add the crisp one-liner ("identity, policy, discovery,
+  payments, and capabilities are portable objects rather than proprietary
+  backend services") verbatim near the hero. Kept the hero line.
 
 ### Claim precision (highest priority — this is security infra)
 - **[strongly agree] "No server of record" overclaims.** BitUnlock is a hosted
