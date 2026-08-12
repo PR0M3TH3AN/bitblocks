@@ -41,7 +41,7 @@
         <a class="btn ghost" href="#compose">How they fit together</a>
       </div>
     </div>
-    <div class="assembly" aria-label="The five building blocks">
+    <div class="assembly" aria-label="The BitBlocks stack: four primitives and Tessera">
       <div class="stack">
         <a class="block-bar" style="--bc:var(--c-login)" href="https://login.bitblocks.network"><span class="swatch"></span><span class="bn">BitLogin</span><span class="bq">who are you</span></a>
         <a class="block-bar" style="--bc:var(--c-gate)" href="https://gate.bitblocks.network"><span class="swatch"></span><span class="bn">BitGate</span><span class="bq">what may you do</span></a>
@@ -79,9 +79,9 @@
   <div class="frame">
     <div class="section-head">
       <p class="coord" style="width:100%">§ 02 — the blocks</p>
-      <h2 class="display">Five primitives.<br>One per question.</h2>
-      <p>Each block is small, opinionated, and independent. Use one, or snap them together — they were
-        designed to compose, not to depend.</p>
+      <h2 class="display">Four primitives.<br>One proof.</h2>
+      <p>Four small, independent primitives — identity, policy, feeds, payments. Use one, or snap them
+        together. Then Tessera proves they compose: a real application built from the four.</p>
     </div>
     <div class="block-list">
       <a class="block-row" style="--bc:var(--c-login)" href="https://login.bitblocks.network">
@@ -113,6 +113,7 @@
           access, and capabilities in bitcoin, with cryptographic proof instead of a payment processor.</p>
         <span class="go">bitunlock.network →</span>
       </a>
+      <div class="tier-label">built with the four ↓</div>
       <a class="block-row" style="--bc:var(--c-tessera)" href="https://tessera.bitblocks.network">
         <div class="id"><span class="sq"></span><div><div class="nm">Tessera</div><div class="q">what you can do</div></div></div>
         <p class="desc">The <b>capability network for agents</b> — Agent Plugins published, curated, and
@@ -129,21 +130,43 @@
   <div class="frame">
     <div class="section-head">
       <p class="coord" style="width:100%">§ 03 — how they compose</p>
-      <h2 class="display">A stack, not a suite.</h2>
-      <p>Read left to right, they answer the full lifecycle of a sovereign app. Any block can stand
-        alone; together they interlock.</p>
+      <h2 class="display">Four primitives.<br>One proof they compose.</h2>
+      <p>Read it bottom to top: an open substrate, four primitives built on it, and applications
+        assembled from those primitives. The client is the disposable part.</p>
     </div>
-    <div class="flow">
-      <div class="node" style="--bc:var(--c-login)"><div class="q">who are you</div><div class="sq"></div><div class="nm">BitLogin</div><div class="role">a key you hold</div></div>
-      <div class="node" style="--bc:var(--c-gate)"><div class="q">what may you do</div><div class="sq"></div><div class="nm">BitGate</div><div class="role">policy you set</div></div>
-      <div class="node" style="--bc:var(--c-feed)"><div class="q">what do you see</div><div class="sq"></div><div class="nm">BitFeed</div><div class="role">an algorithm you write</div></div>
-      <div class="node" style="--bc:var(--c-unlock)"><div class="q">how you're paid</div><div class="sq"></div><div class="nm">BitUnlock</div><div class="role">money you custody</div></div>
-      <div class="node" style="--bc:var(--c-tessera)"><div class="q">what you can do</div><div class="sq"></div><div class="nm">Tessera</div><div class="role">capabilities you own</div></div>
+    <div class="arch" aria-label="BitBlocks architecture: an open substrate, four primitives, and applications built with them">
+      <div class="tier">
+        <span class="tk">built with the stack</span>
+        <div class="tier-row n3">
+          <a class="cell" style="--bc:var(--c-tessera)" href="https://tessera.bitblocks.network"><span class="sq"></span><b>Tessera</b><span>agent capabilities — the worked example</span></a>
+          <div class="cell ghost"><span class="sq"></span><b>your app</b><span>assembled from the same four</span></div>
+          <div class="cell ghost"><span class="sq"></span><b>what's next</b><span>a second, unlike application</span></div>
+        </div>
+      </div>
+      <div class="tier-join">composed from ↓</div>
+      <div class="tier">
+        <span class="tk">four primitives</span>
+        <div class="tier-row n4">
+          <a class="cell" style="--bc:var(--c-login)" href="https://login.bitblocks.network"><span class="sq"></span><b>BitLogin</b><span>identity — who are you</span></a>
+          <a class="cell" style="--bc:var(--c-gate)" href="https://gate.bitblocks.network"><span class="sq"></span><b>BitGate</b><span>policy — what may you do</span></a>
+          <a class="cell" style="--bc:var(--c-feed)" href="https://feed.bitblocks.network"><span class="sq"></span><b>BitFeed</b><span>feeds — what do you see</span></a>
+          <a class="cell" style="--bc:var(--c-unlock)" href="https://bitunlock.network"><span class="sq"></span><b>BitUnlock</b><span>payments — how you're paid</span></a>
+        </div>
+      </div>
+      <div class="tier-join">built on ↓</div>
+      <div class="tier">
+        <span class="tk">open substrate</span>
+        <div class="tier-row n2">
+          <div class="cell"><span class="sq" style="background:var(--ink)"></span><b>Nostr</b><span>signed events · public relays</span></div>
+          <div class="cell"><span class="sq" style="background:var(--c-unlock)"></span><b>Lightning</b><span>cryptographic payment</span></div>
+        </div>
+      </div>
     </div>
     <p class="note"><b>Tessera is the worked example.</b> It signs users in with BitLogin, moderates
       with BitGate's four dimensions, ranks its feed with BitFeed-shaped recipes, and gates paid
-      plugins through BitUnlock — a real application assembled entirely from the blocks. Nothing about
-      it is special-cased; it's just a client over public events, which is the whole point.</p>
+      plugins through BitUnlock — a real application assembled entirely from the four. Nothing about it
+      is special-cased; it's just a client over public events. Prove the architecture and a second,
+      unlike app should assemble from the same four the same way.</p>
   </div>
 </section>
 
