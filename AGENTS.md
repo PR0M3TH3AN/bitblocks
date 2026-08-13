@@ -54,3 +54,10 @@ The canonical backlog is `docs/TODO.md`.
 - There are no tests to update; verify changes manually via the local server
   before considering them done, and don't introduce changes that violate the
   CSP in `vercel.json`.
+
+## Repo memory
+
+Curated agent memory lives in `.agents/` (index: `.agents/MEMORY.md`). Read it
+before substantive work. Propose additions as files in `.agents/proposals/`;
+trusted memory under `.agents/memory/` changes only through reviewed commits.
+Code, tests, and configuration always outrank memory.
