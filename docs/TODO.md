@@ -44,11 +44,12 @@ for security infrastructure. Distilled, with our take:
   what the stack is missing.
 - **[candidate 2026-11-17] BitPortal as a further unlike app.** A spatial-web
   directory (WebXR worlds linked by portals) specified on the four blocks:
-  `PR0M3TH3AN/Nostr-Spatial-Web-Protocol--NSWP-`, `spec.md` v0.3. It is a spec
-  only. It asks the question "where can you go", and it is an app on the four,
+  `PR0M3TH3AN/Nostr-Spatial-Web-Protocol--NSWP-`, `spec.md`. It began as a spec; a first
+  build is live and experimental. It asks the question "where can you go", and it is an app on the four,
   not a fifth primitive. The gaps it found are logged in the BitLogin, BitGate and
   BitFeed `docs/TODO.md` files under "Requests from BitPortal / NSWP"; three are new (BitLogin
   QR-less pairing, BitLogin headset method order, BitGate origin targets) and
   the rest were already planned.
-  - [ ] If BitPortal ships, give it a slot in §03's "built with the stack" row
-    next to Tessera. A site change is a deploy and needs the owner's go-ahead.
+  - [x] 2026-11-17: BitPortal has a row in §02, a cell in §03's "built with
+    the stack" row and a footer link, each marked experimental. It is at
+    `portal.bitblocks.network`, and uses BitLogin and BitFeed so far.
