@@ -34,6 +34,7 @@
   --c-feed: #23b3c6;    /* BitFeed   — feed      */
   --c-unlock: #f7931a;  /* BitUnlock — bitcoin   */
   --c-tessera: #e2478d; /* Tessera   — capability*/
+  --c-portal: #1fbf7a;  /* BitPortal — spatial web, experimental */
 
   --tile: 68px;
   --edge: min(7vw, 96px);
@@ -160,6 +161,7 @@ section { border-top: 1px solid var(--line); }
 .block-row .id .sq { width: 22px; height: 22px; background: var(--bc); flex: none; }
 .block-row .id .nm { font-size: 21px; font-weight: 720; letter-spacing: -0.015em; font-variation-settings: 'wdth' 90; }
 .block-row .id .q { font-family: 'Ubuntu Sans Mono V', ui-monospace, monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bc); margin-top: 2px; }
+.block-row .id .chip { display: inline-block; vertical-align: middle; margin-left: 6px; padding: 2px 6px; border: 1px solid var(--bc); color: var(--bc); font-family: 'Ubuntu Sans Mono V', ui-monospace, monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; font-variation-settings: normal; }
 .block-row .desc { color: var(--muted); font-size: 15.5px; max-width: 60ch; }
 .block-row .desc b { color: var(--ink); font-weight: 600; }
 .block-row .go { display: inline-flex; align-items: center; gap: 7px; font-family: 'Ubuntu Sans Mono V', ui-monospace, monospace; font-size: 12px; color: var(--muted); white-space: nowrap; }
